@@ -1,4 +1,4 @@
-package appium_Basics;
+package java_basics;
 
 import java.util.ArrayList;
 
@@ -61,6 +61,29 @@ public class App {
        arrayList.remove(2);
        System.out.println(arrayList);
        
+//       Strings and String methods
+//       String literal
+       String string_1 = "test String";
        
+//       String Objects 
+       String string_2 = new String("test String for test");
+       
+       String[] splittedStr = string_2.split(" ");
+       System.out.println(splittedStr);
+       for(String s:splittedStr)
+    	   System.out.println(s);
+       
+       for(int i=string_1.length()-1;i>=0;i--)
+    	   System.out.println(string_1.charAt(i));
+
+       myMethod(); 
+       myMethod("apple", "banana", "cherry");
     }
+    
+    public static void myMethod(String... strings) {
+	    for (String s : strings) {
+	        System.out.println(s);
+	    }
+	}
+  
 }
