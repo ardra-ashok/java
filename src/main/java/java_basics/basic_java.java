@@ -1,24 +1,26 @@
 package java_basics;
 
+import java_basics.utils.base;
+
 import java.util.ArrayList;
 
 /**
  * Hello world!
  */
-public class basic_java {
+public class basic_java extends base {
     public static void main(String[] args) {
 //    	Data types
-    	
+
        String str = "hello";
        int number = 5;
        char letter = 'r';
        double dec = 5.99;
        float dec1 = 5.89f;
        boolean flag = true;
-       System.out.println(letter);
-       System.out.println(str+" I am a string");
-       
-       System.out.println("------------------");
+       printMe(letter);
+       printMe(str+" I am a string");
+
+        printMe("------------------");
 //       Arrays
        
        int[] arr = new int[5];
@@ -26,29 +28,29 @@ public class basic_java {
        
        arr[0] = 4;
        arr[4] = 5;
-       for(int i=0;i<arr.length;i++) 
-    	   System.out.println(arr[i]);
+       for(int i=0;i<arr.length;i++)
+           printMe(arr[i]);
       
        String[] names = {"Yellow","Orange","Red"};
        for(int i=0;i<names.length;i++) 
-    	   System.out.println(names[i]);
+    	   printMe(names[i]);
        
-       System.out.println("-------------------");
+       printMe("-------------------");
        for (String name: names)
-    	   System.out.println(name);
+    	   printMe(name);
        
 //       loops
-       System.out.println("-------------------");
+       printMe("-------------------");
        for(int num:arr2) {
     	   if(num%2==0)
-    		   System.out.println(num);
+    		   printMe(num);
     	   else
-    		   System.out.println(num+" Not divisible by 2");
+    		   printMe(num+" Not divisible by 2");
        }
 //       while , do-while and 
        
 //      Arraylists
-       System.out.println("--------------------");
+        printMe("--------------------");
        
        ArrayList<String> arrayList = new ArrayList<String>();
        arrayList.add("abc");
@@ -56,7 +58,7 @@ public class basic_java {
        arrayList.add("fgh");
        arrayList.add("ijk");
        arrayList.remove(2);
-       System.out.println(arrayList);
+        printMe(arrayList);
        
 //       Strings and String methods
 //       String literal
@@ -66,56 +68,56 @@ public class basic_java {
        String string_2 = new String("test String for test");
        
        String[] splittedStr = string_2.split(" ");
-       System.out.println(splittedStr);
+       printMe(splittedStr);
        for(String s:splittedStr)
-    	   System.out.println(s);
+    	   printMe(s);
        
        for(int i=string_1.length()-1;i>=0;i--)
-    	   System.out.println(string_1.charAt(i));
+           printMe(string_1.charAt(i));
 
        myMethod("hello");
        myMethod();
        myMethod("apple", "banana", "cherry");
 
-        System.out.println(revereString("malayalam"));
-        System.out.println(revereString("hello"));
+        printMe(revereString("malayalam"));
+        printMe(revereString("hello"));
 
 //        check for Palindrome
-        System.out.println(palindromeCheck("malayalam"));
-        System.out.println(palindromeCheck("hello"));
+        printMe(palindromeCheck("malayalam"));
+        printMe(palindromeCheck("hello"));
 
 //        Strings
 //         String literal - immutable
         String a = "hello";
         String b = "hello";
         String c = a.concat(" world");
-        System.out.println(a);
+        printMe(a);
         String s = new String("hello");
         String s1 = new String("hello");
 
 //        String buffer and String Builder - mutable
         StringBuffer sb = new StringBuffer("test");
-        System.out.println(sb.append(" world"));
-        System.out.println(sb.insert(4," the"));
-        System.out.println(sb.replace(5,7,"aa"));
-        System.out.println(sb.deleteCharAt(11));
-        System.out.println(sb.reverse());
+        printMe(sb.append(" world"));
+        printMe(sb.insert(4," the"));
+        printMe(sb.replace(5,7,"aa"));
+        printMe(sb.deleteCharAt(11));
+        printMe(sb.reverse());
 
 //        String Builder is not thread safe. Its non synchronised
         StringBuilder sb1 = new StringBuilder("test string");
 
-        System.out.println(a.equals(b)); // true
-        System.out.println(a==b); // true
-        System.out.println(a.equals(s)); // true equal only checks content
-        System.out.println(a==s); // false
-        System.out.println(s==s1); // false
-        System.out.println(s.equalsIgnoreCase(s1));
+        printMe(a.equals(b)); // true
+        printMe(a==b); // true
+        printMe(a.equals(s)); // true equal only checks content
+        printMe(a==s); // false
+        printMe(s==s1); // false
+        printMe(s.equalsIgnoreCase(s1));
     }
 
 //    Java varargs
     public static void myMethod(String... strings) {
 	    for (String s : strings) {
-	        System.out.println(s);
+	        printMe(s);
 	    }
 	}
     public static String revereString(String str){
@@ -128,5 +130,4 @@ public class basic_java {
     public static boolean palindromeCheck(String str) {
         return revereString(str).equals(str);
     }
-  
 }
