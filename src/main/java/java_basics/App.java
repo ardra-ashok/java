@@ -40,7 +40,6 @@ public class App {
     	   System.out.println(name);
        
 //       loops
-       
        System.out.println("-------------------");
        for(int num:arr2) {
     	   if(num%2==0)
@@ -79,7 +78,8 @@ public class App {
        myMethod(); 
        myMethod("apple", "banana", "cherry");
     }
-    
+
+//    Java varargs
     public static void myMethod(String... strings) {
 	    for (String s : strings) {
 	        System.out.println(s);
