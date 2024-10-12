@@ -1,12 +1,14 @@
 package java_basics;
 
-public class parentClass {
+import java_basics.utils.base;
+
+public class parentClass extends base {
 	public static void main(String[] args) {
 	}
 	
 	String color = "blue";
 	
 	public void parentMethod() {
-		System.out.println("I am a parent method");
+		printMe("I am a parent method");
 	}
 }

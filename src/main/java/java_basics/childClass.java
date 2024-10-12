@@ -1,5 +1,6 @@
 package java_basics;
 
+
 public class childClass extends parentClass {
 
 	public static void main(String[] args) {
@@ -8,9 +9,9 @@ public class childClass extends parentClass {
 		c.parentMethod();
 	}
 	public void color() {
-		System.out.println(color);
+		printMe(color);
 	}
 	public void childMethod() {
-		System.out.println("I am a child method");
+		printMe("I am a child method");
 	}
 }

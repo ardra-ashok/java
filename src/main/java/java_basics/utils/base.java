@@ -1,8 +1,12 @@
 package java_basics.utils;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class base {
 
-    public static <T> void printMe(T str){
-        System.out.println(str);
+    @SafeVarargs
+    public static <T> void printMe(T... str){
+        Stream.of(str).forEach(System.out::println);
     }
 }

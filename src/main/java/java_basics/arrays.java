@@ -1,6 +1,8 @@
 package java_basics;
 
-public class arrays {
+import java_basics.utils.base;
+
+public class arrays extends base {
     public static void main(String[] args) {
         int[][] arr = new int[3][3];
         arr[0][0] = 2;
@@ -12,10 +14,10 @@ public class arrays {
         arr[2][0] = 7;
         arr[2][1] = 8;
         arr[2][2] = 9;
-        System.out.println(arr[0][2]);
+        printMe(arr[0][2]);
 
 
-        System.out.println("----------------------");
+        printMe("----------------------");
         for(int i=0;i<3;i++){
             System.out.println();
             for(int j=0;j<3;j++)
@@ -34,8 +36,8 @@ public class arrays {
                     maxNum = arr[i][j];
             }
         }
-        System.out.println("\nMinimum number is: "+minNum);
-        System.out.println("Maximum number is: "+maxNum);
+        printMe("\nMinimum number is: "+minNum);
+        printMe("Maximum number is: "+maxNum);
 
         int k = 0;
         int maxNumInCol = 0;
@@ -44,11 +46,11 @@ public class arrays {
                 maxNumInCol = arr[k][minCol];
             k++;
         }
-        System.out.println("Maximum num in minimums column is: "+maxNumInCol);
+        printMe("Maximum num in minimums column is: "+maxNumInCol);
 
-        System.out.println("----------------------------------");
+        printMe("----------------------------------");
         int[] arr1 = {3,4,7,2,5,8};
-        System.out.println("Swapping array without temp variable");
+        printMe("Swapping array without temp variable");
 
         for(int i=0;i<arr1.length;i++) {
             for (int j = i + 1; j < arr1.length; j++) {

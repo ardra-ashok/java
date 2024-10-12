@@ -1,10 +1,12 @@
 package java_basics;
 
 
-public class basics_1 {
+import java_basics.utils.base;
+
+public class basics_1 extends base {
 
     public void printData(){
-        System.out.println("hello");
+        printMe("hello");
     }
 
     public static void main(String[] args) {
