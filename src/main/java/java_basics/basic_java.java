@@ -2,12 +2,10 @@ package java_basics;
 
 import java.util.ArrayList;
 
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
-
 /**
  * Hello world!
  */
-public class App {
+public class basic_java {
     public static void main(String[] args) {
 //    	Data types
     	
@@ -75,8 +73,43 @@ public class App {
        for(int i=string_1.length()-1;i>=0;i--)
     	   System.out.println(string_1.charAt(i));
 
-       myMethod(); 
+       myMethod("hello");
+       myMethod();
        myMethod("apple", "banana", "cherry");
+
+        System.out.println(revereString("malayalam"));
+        System.out.println(revereString("hello"));
+
+//        check for Palindrome
+        System.out.println(palindromeCheck("malayalam"));
+        System.out.println(palindromeCheck("hello"));
+
+//        Strings
+//         String literal - immutable
+        String a = "hello";
+        String b = "hello";
+        String c = a.concat(" world");
+        System.out.println(a);
+        String s = new String("hello");
+        String s1 = new String("hello");
+
+//        String buffer and String Builder - mutable
+        StringBuffer sb = new StringBuffer("test");
+        System.out.println(sb.append(" world"));
+        System.out.println(sb.insert(4," the"));
+        System.out.println(sb.replace(5,7,"aa"));
+        System.out.println(sb.deleteCharAt(11));
+        System.out.println(sb.reverse());
+
+//        String Builder is not thread safe. Its non synchronised
+        StringBuilder sb1 = new StringBuilder("test string");
+
+        System.out.println(a.equals(b)); // true
+        System.out.println(a==b); // true
+        System.out.println(a.equals(s)); // true equal only checks content
+        System.out.println(a==s); // false
+        System.out.println(s==s1); // false
+        System.out.println(s.equalsIgnoreCase(s1));
     }
 
 //    Java varargs
@@ -85,5 +118,15 @@ public class App {
 	        System.out.println(s);
 	    }
 	}
+    public static String revereString(String str){
+        StringBuilder reversedStr = new StringBuilder();
+        for(int i=str.length()-1;i>=0;i--)
+          reversedStr.append(str.charAt(i));
+        return reversedStr.toString();
+    }
+
+    public static boolean palindromeCheck(String str) {
+        return revereString(str).equals(str);
+    }
   
 }
