@@ -1,7 +1,6 @@
 package java_basics;
 
 import java_basics.utils.base;
-
 import java.util.ArrayList;
 
 /**
