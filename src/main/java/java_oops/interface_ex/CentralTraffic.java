@@ -1,4 +1,4 @@
-package java_advanced.interface_ex;
+package java_oops.interface_ex;
 
 public interface CentralTraffic {
     int a = 4;  // public
